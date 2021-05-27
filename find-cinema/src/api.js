@@ -19,10 +19,10 @@ const getCurrentDay = () => {
     }else{
         return day
     };
-};
+}; 
 
-// Current day/month/year
 const currentYear = new Date().getFullYear();
+// Current day/month/year
 const currentMonth = getCurrentMonth();
 const currentDay = getCurrentDay();
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`
