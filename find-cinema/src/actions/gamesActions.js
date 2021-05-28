@@ -1,12 +1,15 @@
 import axios from "axios";
 // imports the api call made in api.js
-import {popularGamesURL} from "../api";
+import {popularGamesURL, upcomingGamesURL, newGamesURL} from "../api";
 
 // Action Creator
 
 export const loadGames = () => async (dispatch) => {
     // Fetch Axios
     const popularData = await axios.get(popularGamesURL());
+    const newGamesData = await axios.get(newGamesURL());
+    const upcomingData = await axios.get(upcomingGamesURL());
+
     // dispatches to the reducer in gamesREducer.js
     dispatch({
         // makes the action type FETCH_GAMES
@@ -15,5 +18,6 @@ export const loadGames = () => async (dispatch) => {
         payload: {
             popular: popularData.data.results,
         }
-    })
+    });
+
 }

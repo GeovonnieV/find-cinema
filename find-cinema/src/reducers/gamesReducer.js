@@ -5,6 +5,7 @@ const initState = {
     searched: []
 }
 
+// reducers take in state and an action
 const gamesReducer = (state, action) => {
     switch (action.type) {
         case "FETCH_GAMES":
