@@ -1,5 +1,5 @@
 import axios from "axios";
-// imports the api call made in api.js
+// imports the apis made in api.js
 import {popularGamesURL, upcomingGamesURL, newGamesURL} from "../api";
 
 // Action Creator
@@ -17,7 +17,9 @@ export const loadGames = () => async (dispatch) => {
         // updates the reducers popular to whatver we got back from the axios call
         payload: {
             popular: popularData.data.results,
+            upcoming: upcomingData.data.results,
+            newGames: newGamesData.data.results,
         }
     });
 
-}
+};
