@@ -31,9 +31,9 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`
 
 // Popular games
 // gets popular games from last year to current date
-const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
-const upcoming_games = `games?dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
-const newGames = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
+const popular_games = `games?key=55511e81752f448bab0f14f7530659dd&dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
+const upcoming_games = `games?key=55511e81752f448bab0f14f7530659dd&dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
+const newGames = `games?key=55511e81752f448bab0f14f7530659dd&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
 export const popularGamesURL = () => `${base_url}${popular_games}`;
 export const upcomingGamesURL = () => `${base_url}${upcoming_games}` ;
