@@ -32,9 +32,12 @@ const Home = () => {
                 id={game.id}
                 image={game.background_image}
                 key={game.id}
+                // 
+                screenshots={game.short_screenshots}
               />
             ))
             //
+
         }
       </Games>
       {/*  */}

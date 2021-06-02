@@ -38,6 +38,8 @@ const newGames = `games?key=55511e81752f448bab0f14f7530659dd&dates=${lastYear},$
 export const popularGamesURL = () => `${base_url}${popular_games}`;
 export const upcomingGamesURL = () => `${base_url}${upcoming_games}` ;
 export const newGamesURL = () => `${base_url}${newGames}` ;
-// Game details
+// Game details/ gives detail on specific game
 // Dont know what game ID is yet but when we do it will be put into the call
-export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}`
+export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}`;
+// Game Screenshot
+// export const gameScreenshotURL = (game_id) => `${base_url}games/${game_id}/screenshots`;

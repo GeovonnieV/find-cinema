@@ -5,7 +5,7 @@ const initState = {
     searched: []
 }
 
-// reducers take in state and an action
+// reducers take in state and an action, state and action are updated/made in action.js
 const gamesReducer = (state, action) => {
     switch (action.type) {
         // if the action type from gamesAction.js is FetchGames set the popular state to popular in the payload in gamesAction.js

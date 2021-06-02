@@ -6,11 +6,12 @@ import {popularGamesURL, upcomingGamesURL, newGamesURL} from "../api";
 
 export const loadGames = () => async (dispatch) => {
     // Fetch Axios
+    // popularData etc, holds what we get back form the Axios call
     const popularData = await axios.get(popularGamesURL());
     const newGamesData = await axios.get(newGamesURL());
     const upcomingData = await axios.get(upcomingGamesURL());
 
-    // dispatches to the reducer in gamesREducer.js
+    // dispatches to the reducer in gamesReducer.js
     dispatch({
         // makes the action type FETCH_GAMES
         type: "FETCH_GAMES",
